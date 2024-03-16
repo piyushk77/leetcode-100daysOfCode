@@ -4,3 +4,4 @@
 .vscode
 sol*.cpp
 stats/
+test/
