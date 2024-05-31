@@ -6,31 +6,21 @@ class Solution
 public:
     vector<int> singleNumber(vector<int> &nums)
     {
-        vector<int> bin1;
-        vector<int> bin2;
-        int result{};
+        // Get the xor of the two elements
+        int xorSum{};
         for (auto x : nums)
-            result ^= x;
-
+            xorSum ^= x;
+        // Find the diff bit
         int mask{1};
-        while (!(result & mask))
-        {
+        while (!(mask & xorSum))
             mask <<= 1;
-        }
+        // Find the two elements
+        int first{}, second{};
         for (auto x : nums)
-        {
-            if ((x & mask))
-                bin1.push_back(x);
+            if (x & mask)
+                first ^= x;
             else
-                bin2.push_back(x);
-        }
-
-        int res1{}, res2{};
-        for (auto x : bin1)
-            res1 ^= x;
-        for (auto x : bin2)
-            res2 ^= x;
-
-        return {res1, res2};
+                second ^= x;
+        return {first, second};
     }
 };
