@@ -9,13 +9,11 @@ public:
     {
         int count{};
         for (auto x : details)
-        {
             if (x[11] > '6')
                 ++count;
             else if (x[11] == '6')
                 if (x[12] > '0')
                     ++count;
-        }
         return count;
     }
 };
