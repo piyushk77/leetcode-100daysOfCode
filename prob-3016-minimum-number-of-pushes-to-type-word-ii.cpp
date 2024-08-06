@@ -10,9 +10,7 @@ public:
     {
         vector<int> hashTable(static_cast<int>('z') + 1);
         for (auto x : word)
-        {
             ++hashTable[x];
-        }
         sort(hashTable.begin(), hashTable.end(), greater<int>());
         int press{1};
         int count{};
