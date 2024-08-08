@@ -10,6 +10,7 @@ public:
         vector<vector<int>> coordinates;
         int hSteps{1}, vSteps{1};
         int elements{rows * cols};
+
         while (elements)
         {
             // move right
