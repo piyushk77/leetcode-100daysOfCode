@@ -87,7 +87,6 @@ public:
             ++col;
             ++startRow;
         }
-
         return mat;
     }
 };
