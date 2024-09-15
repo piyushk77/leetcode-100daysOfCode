@@ -16,6 +16,7 @@ public:
             }
             answer.push_back(xorSum);
         }
+
         return answer;
     }
 };

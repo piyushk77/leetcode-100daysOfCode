@@ -25,6 +25,7 @@ public:
             if (flag)
                 ++count;
         }
+
         return count;
     }
 };
